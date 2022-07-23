@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background: linear-gradient(to right lightyellow, orange);
+  margin: 0;
+  padding: 0;
+}
+
+.the-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  border: 10px solid black;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.hand {
+  height: 5px;
+  width: 110px;
+  background-color: white;
+  position: absolute;
+  left: 11%;
+  top: 50%;
+
+  transform-origin: 100%;
+
+  transform: rotate(var(--hourtrans, 90deg));
+  -webkit-transform: rotate(var(--hourtrans, 90deg));
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transition: all 0.05s;
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  -ms-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.6, 1);
+}
+
+.the-frame::before {
+  content: "";
+  height: 3px;
+  width: 130px;
+  background-color: white;
+  position: absolute;
+  left: 5%;
+  top: 49%;
+  transform-origin: 100%;
+  transform: rotate(var(--beforetrans, 90deg));
+  -webkit-transform: rotate(var(--beforetrans, 90deg));
+  -moz-transform: rotate(var(--beforetrans, 90deg));
+  -ms-transform: rotate(var(--beforetrans, 90deg));
+  -o-transform: rotate(var(--beforetrans, 90deg));
+  transition: all 0.05s;
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  -ms-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.6, 1);
+}
+
+.the-frame::after {
+  content: "";
+  height: 5px;
+  width: 130px;
+  background-color: white;
+  position: absolute;
+  left: 5%;
+  top: 49%;
+
+  transform-origin: 100%;
+  transform: rotate(var(--mintrans, 90deg));
+  -webkit-transform: rotate(var(--mintrans, 90deg));
+  -moz-transform: rotate(var(--mintrans, 90deg));
+  -ms-transform: rotate(var(--mintrans, 90deg));
+  -o-transform: rotate(var(--mintrans, 90deg));
+  transition: all 0.05s;
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  -ms-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.6, 1);
+}
